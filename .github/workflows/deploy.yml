@@ -13,7 +13,7 @@ jobs:
         with:
           version: 9
           run_install: false
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -23,11 +23,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install slidev
-        run:  pnpm i -g @slidev/cli
-
       - name: Build
-        run: slidev build --base vue-js-why-so-much-love
+        run: pnpm build
 
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v4
