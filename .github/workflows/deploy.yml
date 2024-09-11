@@ -5,8 +5,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+          run_install: false
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '>=20'
           cache: 'pnpm'
@@ -21,7 +30,7 @@ jobs:
         run: slidev build --base vue-js-why-so-much-love
 
       - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           build_dir: dist
         env:
