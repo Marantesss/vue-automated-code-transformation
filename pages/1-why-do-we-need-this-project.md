@@ -6,11 +6,21 @@ layout: section
 
 ---
 
-# Problems, problems, problems
+# Let me paint a picture
 
-- [Vue 2 has reached End of Life (EOL)](https://v2.vuejs.org/lts/) on December 31st, 2023.
-- [Class component based syntax](https://class-component.vuejs.org/) and [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) is no longer available for Vue 3
-- Infraspeak's web client is pretty large and manual migration is not straightforward
+<ul>
+  <li v-click>It's April 2023 <span font="thin">(it might have been May)</span></li>
+  <li v-click>Infraspeak's web client is 5 years old and using Vue <a href="https://github.com/vuejs/vue/tree/v2.6.11"><code>v2.6.11</code> (Dec 13, 2019)</a>;</li>
+  <li v-click>
+    It relies on a <a href="https://class-component.vuejs.org/">Class based syntax</a> and the <a href="https://github.com/kaorun343/vue-property-decorator"><code>vue-property-decorator</code></a> package;
+  </li>
+  <li v-click>
+    The code base is pretty large so manual migration is off the table;
+  </li>
+  <li v-click>
+    <a href="https://v2.vuejs.org/lts/">Vue 2 will reach End of Life (EOL)</a> on December 31st, 2023 with <code>v2.7.x</code> as the final minor version;
+  </li>
+</ul>
 
 ---
 
@@ -29,14 +39,14 @@ export default class ExampleComponent extends mixins(MyMixin) {
   myData = 'stuff'
 
   @Watch('myNumber', { immediate: true, deep: true })
-  onMyDataOne(newVal: string, oldVal:string) { }
+  onMyNumberChange(newVal: string, oldVal:string) { }
 
   @Emit('my-event')
   emitMyEventWithPayloadParam (num: number): void { }
 
-  get myMethod () { }
+  get myComputedProperty () { }
 
-  doMath(a: number, b: number): number { }
+  myMethod(a: number, b: number): number { }
 }
 ```
 

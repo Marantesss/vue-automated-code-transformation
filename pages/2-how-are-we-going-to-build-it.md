@@ -33,14 +33,14 @@ export default class ExampleComponent extends mixins(MyMixin) {
   myData = 'stuff'
 
   @Watch('myNumber', { immediate: true, deep: true })
-  onMyDataOne(newVal: string, oldVal:string) { }
+  onMyNumberChange(newVal: string, oldVal:string) { }
 
   @Emit('my-event')
   emitMyEventWithPayloadParam (num: number): void { }
 
-  get myMethod () { }
+  get myComputedProperty () { }
 
-  doMath(a: number, b: number): number { }
+  myMethod(a: number, b: number): number { }
 }
 ```
 
@@ -56,10 +56,10 @@ export default {
   props: { myNumber: { type: Number, required: true } },
   data() { return {  myData: 'stuff' }},
   watch: {
-    myNumber: { deep: true, immediate: true, handler(newNumber: number, oldNumber: number) { } }
+    onMyNumberChange: { deep: true, immediate: true, handler(newNumber: number, oldNumber: number) { } }
   }
-  computed: { myMethod() { } },
-  methods: { doMath(a: number, b: number): number { } }
+  computed: { myComputedProperty() { } },
+  methods: { myMethod(a: number, b: number): number { } }
 }
 ```
 
