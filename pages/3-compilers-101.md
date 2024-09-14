@@ -268,6 +268,8 @@ isEven(2)
 </div>
 
 ---
+transition: slide-up
+---
 
 # 4. Code Generation
 

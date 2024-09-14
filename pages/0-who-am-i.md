@@ -20,6 +20,8 @@
 </div>
 
 ---
+transition: slide-up
+---
 
 # This is not my first Rodeo 🤠
 

@@ -23,6 +23,8 @@ layout: section
 </ul>
 
 ---
+transition: slide-up
+---
 
 # Class based-syntax
 

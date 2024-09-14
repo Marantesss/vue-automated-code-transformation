@@ -135,6 +135,8 @@ export default defineComponent({
 | Class [`getters and setters`](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters) | [Computed](https://vuejs.org/api/options-state.html#computed) property declaration |
 
 ---
+transition: slide-up
+---
 
 # How can we do this automatically?
 
