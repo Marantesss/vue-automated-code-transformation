@@ -15,7 +15,7 @@ transition: slide-up
   <div flex="~ col items-center gap-2">
     <img class="size-24" rounded="full" src="/img/6-tiago-pereira.jpeg" />
     <div>Tiago Pereira</div>
-    <a href="https://github.com/tiagoafpereira" class="text-xs" font="thin">@tiagofpereira</a>
+    <a href="https://github.com/tiagoafpereira" class="text-xs" font="thin">@tiagoafpereira</a>
   </div>
 
   <div flex="~ col items-center gap-2">
